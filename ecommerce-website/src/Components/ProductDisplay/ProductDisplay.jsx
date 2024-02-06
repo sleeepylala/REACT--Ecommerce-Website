@@ -35,30 +35,30 @@ const ProductDisplay = (props) => {
           <div className="productdisplay-right-price-new">
             ${product.new_price}
           </div>
-          <div className="productdisplay-right-description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores,
-            quaerat! Ab earum dolore assumenda suscipit ea repudiandae similique
-            quasi. Hic eum dolorem voluptas repellendus officia vero quis velit
-            nisi ab?
-          </div>
-          <div className="productdisplay-right-size">
-            <h1>Select Size</h1>
-            <div className="productdisplay-right-size">
-              <div>S</div>
-              <div>M</div>
-              <div>L</div>
-              <div>XL</div>
-              <div>XXL</div>
-            </div>
-          </div>
-          <button>ADD TO CART</button>
-          <p className="productdisplay-right-category">
-            <span>Category :</span>Women, T-Shirt, Crop Top
-          </p>
-          <p className="productdisplay-right-category">
-            <span>Tags :</span>Modern, Latest
-          </p>
         </div>
+        <div className="productdisplay-right-description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores,
+          quaerat! Ab earum dolore assumenda suscipit ea repudiandae similique
+          quasi. Hic eum dolorem voluptas repellendus officia vero quis velit
+          nisi ab?
+        </div>
+        <div className="productdisplay-right-size">
+          <h1>Select Size</h1>
+          <div className="productdisplay-right-sizes">
+            <div>S</div>
+            <div>M</div>
+            <div>L</div>
+            <div>XL</div>
+            <div>XXL</div>
+          </div>
+        </div>
+        <button>ADD TO CART</button>
+        <p className="productdisplay-right-category">
+          <span>Category :</span> Women, T-Shirt, Crop Top
+        </p>
+        <p className="productdisplay-right-category">
+          <span>Tags :</span> Modern, Latest
+        </p>
       </div>
     </div>
   );
