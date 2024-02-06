@@ -34,8 +34,8 @@ function App() {
             element={<ShopCategory banner={kid_banner} category="kid" />}
           />
 
-          <Route path="/product" element={<Product />} />
-          <Route path=":productId" element={<Product />} />
+          {/* Utilizza il parametro :productId nella stessa route */}
+          <Route path="/product/:productId" element={<Product />} />
 
           <Route path="/cart" element={<Cart />} />
 
