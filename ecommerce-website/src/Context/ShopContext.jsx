@@ -17,7 +17,6 @@ const ShopContextProvider = (props) => {
     // Il Provider del contesto ShopContext fornisce il valore contextValue a tutti i componenti figli
     // In questo modo, i componenti figli possono accedere al valore del contesto
     <ShopContext.Provider value={contextValue}>
-      {/* Rendere disponibili i componenti figli */}
       {props.children}
     </ShopContext.Provider>
   );
