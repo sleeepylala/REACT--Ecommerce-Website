@@ -18,8 +18,6 @@ const getDefaultCart = () => {
 // Definizione del componente ShopContextProvider
 const ShopContextProvider = (props) => {
   const [cartItems, setCartItems] = useState(getDefaultCart());
-  // Creazione di un oggetto contextValue che contiene tutte le informazioni sui prodotti
-  const contextValue = { all_product, cartItems };
 
   const addToCart = (itemId) => {
     setCartItems((prev) => ({
@@ -27,6 +25,16 @@ const ShopContextProvider = (props) => {
       [itemId]: prev[itemId] + 1,
     }));
   };
+
+  const RemoveFromCart = (itemId) => {
+    setCartItems((prev) => ({
+      ...prev,
+      [itemId]: prev[itemId] - 1,
+    }));
+  };
+
+  // Creazione di un oggetto contextValue che contiene tutte le informazioni sui prodotti
+  const contextValue = { all_product, cartItems, addToCart, RemoveFromCart };
 
   // Restituzione del Provider del contesto ShopContext con il valore contextValue
   return (
