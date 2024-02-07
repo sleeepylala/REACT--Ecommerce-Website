@@ -9,7 +9,7 @@ export const ShopContext = createContext(null);
 
 const getDefaultCart = () => {
   let cart = {};
-  for (let i = 0; i < all_product.length; i++) {
+  for (let i = 0; i < all_product.length + 1; i++) {
     cart[i] = 0;
   }
   return cart;
@@ -20,6 +20,13 @@ const ShopContextProvider = (props) => {
   const [cartItems, setCartItems] = useState(getDefaultCart());
   // Creazione di un oggetto contextValue che contiene tutte le informazioni sui prodotti
   const contextValue = { all_product, cartItems };
+
+  const addToCart = (itemId) => {
+    setCartItems((prev) => ({
+      ...prev,
+      [itemId]: prev[itemId] + 1,
+    }));
+  };
 
   // Restituzione del Provider del contesto ShopContext con il valore contextValue
   return (
