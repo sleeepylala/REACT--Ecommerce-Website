@@ -17,9 +17,9 @@ const getDefaultCart = () => {
 
 // Definizione del componente ShopContextProvider
 const ShopContextProvider = (props) => {
-  // Creazione di un oggetto contextValue che contiene tutte le informazioni sui prodotti
-  const contextValue = { all_product };
   const [cartItems, setCartItems] = useState(getDefaultCart());
+  // Creazione di un oggetto contextValue che contiene tutte le informazioni sui prodotti
+  const contextValue = { all_product, cartItems };
 
   // Restituzione del Provider del contesto ShopContext con il valore contextValue
   return (
