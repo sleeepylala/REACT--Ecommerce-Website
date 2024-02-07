@@ -1,5 +1,5 @@
 // Import di React e del metodo createContext da React
-import React, { createContext } from "react";
+import React, { createContext, useState } from "react";
 
 // Import del modulo all_product contenente le informazioni sui prodotti
 import all_product from "../Components/Assets/all_product";
@@ -19,6 +19,7 @@ const getDefaultCart = () => {
 const ShopContextProvider = (props) => {
   // Creazione di un oggetto contextValue che contiene tutte le informazioni sui prodotti
   const contextValue = { all_product };
+  const [cartItems, setCartItems] = useState(getDefaultCart());
 
   // Restituzione del Provider del contesto ShopContext con il valore contextValue
   return (
