@@ -63,6 +63,7 @@ const ShopContextProvider = (props) => {
     addToCart,
     removeFromCart,
     getTotalCartAmount,
+    getTotalCartItems,
   };
 
   // Restituzione del Provider del contesto ShopContext con il valore contextValue
