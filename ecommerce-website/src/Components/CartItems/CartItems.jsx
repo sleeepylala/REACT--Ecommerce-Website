@@ -20,7 +20,7 @@ const CartItems = () => {
         if (cartItems[item.id] > 0) {
           return (
             <div>
-              <div className="cartitems-format">
+              <div className="cartitems-format cartitems-format-main">
                 <img
                   src={item.image}
                   className="cartitems-product-icon"
@@ -31,8 +31,9 @@ const CartItems = () => {
                 <button className="cartitems-quantity">
                   {cartItems[item.id]}
                 </button>
-                <p>{item.new_price * cartItems[item.id]}</p>
+                <p>${item.new_price * cartItems[item.id]}</p>
                 <img
+                  className="cartitems-remove-icon"
                   src={remove_icon}
                   alt="remove-icon"
                   onClick={() => {
