@@ -26,7 +26,7 @@ const ShopContextProvider = (props) => {
     }));
   };
 
-  const RemoveFromCart = (itemId) => {
+  const removeFromCart = (itemId) => {
     setCartItems((prev) => ({
       ...prev,
       [itemId]: prev[itemId] - 1,
@@ -34,7 +34,7 @@ const ShopContextProvider = (props) => {
   };
 
   // Creazione di un oggetto contextValue che contiene tutte le informazioni sui prodotti
-  const contextValue = { all_product, cartItems, addToCart, RemoveFromCart };
+  const contextValue = { all_product, cartItems, addToCart, removeFromCart };
 
   // Restituzione del Provider del contesto ShopContext con il valore contextValue
   return (
